@@ -40,7 +40,7 @@ namespace firstProjectWebApi.Controllers
             {
                 if(key.Name == name)
                 {
-                    key.Name = cat.name;
+                    key.Name = cat.Name;
                 }
             }
         }
@@ -54,7 +54,7 @@ namespace firstProjectWebApi.Controllers
             {
                 if (key.Name == name)
                 {
-                    cat.remove();
+                    cats.Remove(key);
                 }
             }
         }
