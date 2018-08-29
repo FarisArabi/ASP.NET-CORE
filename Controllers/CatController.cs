@@ -10,27 +10,26 @@ namespace firstProjectWebApi.Controllers
 	[Route("api/cat")]
     [ApiController]
 	public class CatController : Controller
-	{	
-		//cats List
-		public static List <Cat> cats = new List<Cat>();
+	{
+        //cats List
+        public static List <Cat> cats = new List<Cat>();
 
-		// GET api/cat/
-		//your code is here uncomment this method and write the required code to handle get request
-		// [HttpGet]
-		// public IEnumerable<Cat> GetAll()
-		// {
-		// 	//your code is here
-			
-		// }
+        // GET api/cat/
+        //your code is here uncomment this method and write the required code to handle get request
+        [HttpGet]
+		 public IEnumerable<Cat> GetAll()
+		 {
+            return cats;
+         }
 
         
         // POST api/cat
 		[HttpPost]
 		public Cat Insert([FromBody]Cat cat)
 		{
-			//your code is here
-			
-			return cat;
+            cats.Add(new Cat("cat"));
+            Console.WriteLine(cats);
+            return cat;
 		}
 
         // PUT api/cat/name
