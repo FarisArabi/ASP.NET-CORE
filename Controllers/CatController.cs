@@ -28,6 +28,7 @@ namespace firstProjectWebApi.Controllers
 		public Cat Insert([FromBody]Cat cat)
 		{
             cats.Add(new Cat(cat.Name , cat.Age , cat.Type));
+
             return cat;
 		}
 
@@ -35,16 +36,28 @@ namespace firstProjectWebApi.Controllers
 		[HttpPut("{name}")]
 		public void Put(string name, [FromBody] Cat cat)
 		{
-			//your code is here
-		}
+			foreach(Cat key in cats)
+            {
+                if(key.Name == name)
+                {
+                    key.Name = cat.name;
+                }
+            }
+        }
 
         // DELETE api/cat/1
 
 		[HttpDelete("{name}")]
 		public void Delete(string name)
 		{
-			//your code is here
-		}
+            foreach (Cat key in cats)
+            {
+                if (key.Name == name)
+                {
+                    cat.remove();
+                }
+            }
+        }
 
 
 	}
