@@ -2,8 +2,16 @@ namespace firstProjectWebApi.Models
 {
     public class Cat
     {
-    	//your code is here
-        
-        
+       
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Type { get; set; }
+
+        public Cat (string name , int age , string type)
+        {
+            this.Name = name;
+            this.Age = age;
+            this.Type = type;
+        }
     }
 }
