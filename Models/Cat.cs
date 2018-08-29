@@ -4,13 +4,14 @@ namespace firstProjectWebApi.Models
     {
        
         public string Name { get; set; }
-        public int Age;
-        public string Type;
+        public int Age { get; set; }
+        public string Type { get; set; }
 
-        public Cat(string Name)
+        public Cat (string name , int age , string type)
         {
-            this.Name = Name;
+            this.Name = name;
+            this.Age = age;
+            this.Type = type;
         }
-
     }
 }

@@ -27,8 +27,7 @@ namespace firstProjectWebApi.Controllers
 		[HttpPost]
 		public Cat Insert([FromBody]Cat cat)
 		{
-            cats.Add(new Cat("cat"));
-            Console.WriteLine(cats);
+            cats.Add(new Cat(cat.Name , cat.Age , cat.Type));
             return cat;
 		}
 
